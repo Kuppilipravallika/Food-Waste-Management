@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register and Login Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .form-toggle {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .form-toggle a {
+            color: #007BFF;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div id="sectionfistpage">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+          <div class="container">
+            <a class="navbar-brand" href="#">
+              <img src="rama.png"
+                class="foodlogo" />
+            </a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+              aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav ml-auto">
+                <a class="nav-link active" id="navItem1" href="#wcuSection">
+                  Home
+                  <span class="sr-only">(current)</span>
+                </a>
+                <a class="nav-link" href="#followUsSection" id="navItem4" onclick="display('sectionLogIn')">Login</a>
+                <a class="nav-link" href="#followUsSection" id="navItem4" onclick="display('sectionSignUp')">Signup</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+    
+    
+        <h1 class="h-f">Welcome to FWM - Students Leading the Way to Zero Waste!</h1>
+        <div class="d-flex flex-row ">
+          <p class="para">
+            About FWM :<br><br>
+            FWM is not just a website; it's a movement led by students like you to revolutionize food waste management. Join us in the mission to reduce waste, optimize meals, and make your dining experience more sustainable!<br><br>
+            Our Key Features:<br><br>
+     Student-Driven Feedback System:
+    Empower yourself! Our unique system relies on your valuable feedback to drive waste reduction initiatives. Your voice shapes the future of dining .<br>
+    Witness the impact! Track on how your feedback contributes to waste reduction, creating a accountable food management system.<br>
+    Customized Meal Plans: Your preferences matter. Our system adapts to your feedback, crafting  meal plans that align with your tastes and values.<br>
+    
+    </p>
+    
+          <img src="rama.png" class="home-logo" />
+        </div>
+    
+      </div>
+      </div>
+
+
+      <div id="sectionHome">
+        <div class="wcu-section pt-5 pb-5"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+    
+              <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+                <div class="container">
+                  <a class="navbar-brand" href="#">
+                    <img src="rama.png"
+                      class="foodlogo" />
+                  </a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav ml-auto">
+                      <a class="nav-link active" id="navItem1" href="#wcuSection">
+                        Home
+                        <span class="sr-only">(current)</span>
+                      </a>
+                      <a class="nav-link" href="#exploreMenuSection" id="navItem2" onclick="display('sectionMenu')">Explore
+                        Menu</a>
+                      <a class="nav-link" href="#deliveryPaymentSection" id="navItem3"
+                        onclick="display('sectionFeedBack')">FeedBack</a>
+                      <a class="nav-link" href="#followUsSection" id="navItem4" onclick="followUsSection">To Contact</a>
+                    </div>
+                  </div>
+                </div>
+              </nav>
+    
+            </div>
+          </div>
+        </div>
+    
+        <h1 class="hf">Be the Change!</h1>
+        <div class="d-flex flex-row ">
+          <p class="para">
+            Share Your Insights....<br>
+    Your opinions shape the dining landscape. Share your thoughts on portions, menu items, and more to drive positive change.
+    See the difference you make! Your feedback directly contributes to food waste reduction and makes dining services more sustainable.<br>
+    Take it a step further! Collaborate with like-minded students in sustainability initiatives that go beyond the dining hall.<br><br>
+    
+    Ready to Lead the Change?<br><br>
+    Your journey starts now!<br>
+    Check the feedback in navigation bar above..</p>
+    
+          <img src="rama.png" class="home-logo" />
+        </div>
+    
+    
+        <div style="background-size: cover; width: 100vw;">
+          <div class="follow-us-section pt-5 pb-5" id="followUsSection">
+            <div class="row">
+              <div class="col-12">
+                <h1 class="follow-us-section-heading">To Contact</h1>
+                <div class="text-center">
+                  <p>fwm9@gmail.com</p>
+                  <p>hostelmess9@gmail.com</p>
+                  <p>mess contact no.:5555</p>
+                </div>
+              </div>
+            </div>
+            <hr>
+            
+    
+        <div class="footer-section pt-5 pb-5" style="background-size: cover; width: 100vw;">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 text-center">
+                <img src="rama.png"
+                  class="food-munch-logo" />
+                 <h1 class="footer-section-detail">We have not completed the project yet. This is a prototype of our FWM</h1>
+                <p class="footer-section-copyright">
+                  © 2024 FWM. All rights reserved.
+                </p> 
+    
+    
+              </div>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+      </div>
+      </div>
+      </div>
+    
+      </div>
+    
+      <div id="sectionLogin">
+        <div class="login">
+    
+          <button class="butn" onclick="display('sectionLogIn')">log in</button>
+          <button class="butn" onclick="display('sectionSignUp')">sign up</button>
+        </div>
+      </div>
+    
+
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="author" name="vk">
+  <title>Food Feedback</title>
+  <link rel="stylesheet" href="final.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <!-- Bootstrap start -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <!-- Bootstrap end -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    .container {
+      background-color: white;
+      padding: 10px;
+      border-radius: 2px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 1000px;
+      margin: 20px auto;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color:black;
+    }
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .form-group1{
+      padding-top: 50px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .form-toggle {
+      text-align: center;
+      margin-top: 50px;
+    }
+    .form-toggle a {
+      color: #007BFF;
+      cursor: pointer;
+    }
+    .hidden {
+      display: none;
+    }
+    .home-content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .home-logo {
+      max-width: 200px;
+      border-radius: 10px;
+    }
+    .navbar {
+      margin-bottom: 10px;
+    }
+    .feedback-form, .contact-info {
+      padding: 20px;
+      border-radius: 2px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .form-123 {
+      margin-top: 20px;
+    }
+    .card-fd {
+      background-color: #057221;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .btn-feedback {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .btn-feedback:hover {
+      background-color: #45a049;
+    }
+    h1{
+      color: black;
+    }
+    .h-f{
+      color: black;
+    }
+    .para{
+      color:black;
+    }
+    .contact-info{
+      padding-top: 100px;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="rama.png" class="foodlogo" />
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav ml-auto">
+          <a class="nav-link active" href="#" onclick="displaySection('sectionHome')">Home</a>
+          <a class="nav-link" href="#" onclick="displaySection('sectionFeedBack')">Feedback</a>
+          <a class="nav-link" href="#" onclick="displaySection('sectionContact')">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div id="sectionHome" class="container">
+    <h1 class="h-f">Welcome to FWM - Students Leading the Way to Zero Waste!</h1>
+    <div class="home-content">
+      <p class="para">
+        About FWM:<br><br>
+        FWM is not just a website; it's a movement led by students like you to revolutionize food waste management. Join us in the mission to reduce waste, optimize meals, and make your dining experience more sustainable!<br><br>
+        Our Key Features:<br><br>
+        Student-Driven Feedback System: Empower yourself! Our unique system relies on your valuable feedback to drive waste reduction initiatives. Your voice shapes the future of dining.<br>
+        Witness the impact! Track how your feedback contributes to waste reduction, creating an accountable food management system.<br>
+        Customized Meal Plans: Your preferences matter. Our system adapts to your feedback, crafting meal plans that align with your tastes and values.<br>
+      </p>
+      <img src="rama.png" class="home-logo" />
+    </div>
+  </div>
+  <div id="sectionFeedBack" class="container hidden">
+    <div class="feedback-form">
+      <h2>We appreciate your feedback!</h2>
+      <form action="submit_feedback.php" method="post">
+        <div class="form-group1">
+          <label for="location">Location:</label>
+          <select class="form-control" id="location" name="location">
+            <option value="">Please Select</option>
+            <option value="College Hostel">College Hostel</option>
+            <option value="PG Hostel">PG Hostel</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Time Visited:</label><br>
+          <input type="checkbox" id="breakfast" name="time[]" value="Breakfast">
+          <label for="breakfast" class="mr-3">Breakfast</label>
+          <input type="checkbox" id="lunch" name="time[]" value="Lunch">
+          <label for="lunch" class="mr-3">Lunch</label>
+          <input type="checkbox" id="dinner" name="time[]" value="Dinner">
+          <label for="dinner" class="mr-3">Dinner</label>
+        </div>
+        <div class="form-group">
+          <label>Food Quality:</label><br>
+          <input type="radio" id="qualityExcellent" name="foodQuality" value="Excellent">
+          <label for="qualityExcellent" class="mr-3">Excellent</label>
+          <input type="radio" id="qualityGood" name="foodQuality" value="Good">
+          <label for="qualityGood" class="mr-3">Good</label>
+          <input type="radio" id="qualityAverage" name="foodQuality" value="Average">
+          <label for="qualityAverage" class="mr-3">Average</label>
+          <input type="radio" id="qualityDissatisfied" name="foodQuality" value="Dissatisfied">
+          <label for="qualityDissatisfied" class="mr-3">Dissatisfied</label>
+        </div>
+        <div class="form-group">
+          <label>Taste:</label><br>
+          <input type="radio" id="tasteExcellent" name="taste" value="Excellent">
+          <label for="tasteExcellent" class="mr-3">Excellent</label>
+          <input type="radio" id="tasteGood" name="taste" value="Good">
+          <label for="tasteGood" class="mr-3">Good</label>
+          <input type="radio" id="tasteAverage" name="taste" value="Average">
+          <label for="tasteAverage" class="mr-3">Average</label>
+          <input type="radio" id="tasteDissatisfied" name="taste" value="Dissatisfied">
+          <label for="tasteDissatisfied" class="mr-3">Dissatisfied</label>
+        </div>
+        <div class="form-group">
+          <label>Cleanliness:</label><br>
+          <input type="radio" id="cleanlinessExcellent" name="cleanliness" value="Excellent">
+          <label for="cleanlinessExcellent" class="mr-3">Excellent</label>
+          <input type="radio" id="cleanlinessGood" name="cleanliness" value="Good">
+          <label for="cleanlinessGood" class="mr-3">Good</label>
+          <input type="radio" id="cleanlinessAverage" name="cleanliness" value="Average">
+          <label for="cleanlinessAverage" class="mr-3">Average</label>
+          <input type="radio" id="cleanlinessDissatisfied" name="cleanliness" value="Dissatisfied">
+          <label for="cleanlinessDissatisfied" class="mr-3">Dissatisfied</label>
+        </div>
+        <div class="form-group">
+          <label for="comments">Additional Comments:</label>
+          <textarea class="form-control" id="comments" name="comments" rows="4" placeholder="Your comments..."></textarea>
+        </div>
+        <button type="submit" class="btn-feedback">Submit Feedback</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="sectionContact" class="container hidden">
+    <div class="contact-info">
+      <p> <h2>Contact Us</h2>If you have any questions or need further assistance, feel free to reach out to us:</p>
+      <ul class="list-unstyled">
+        <li><i class="fas fa-envelope"></i> Email:  support@fwm.com</li>
+        <li><i class="fas fa-phone"></i> Phone:  1234567890</li>
+        <li><i class="fas fa-map-marker-alt"></i> Address:  Visakhapatnam</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    function displaySection(sectionId) {
+      const sections = ['sectionHome', 'sectionFeedBack', 'sectionContact'];
+      sections.forEach(id => {
+        document.getElementById(id).classList.add('hidden');
+      });
+      document.getElementById(sectionId).classList.remove('hidden');
+    }
+
+    // Default to displaying the home section
+    displaySection('sectionHome');
+  </script>
+</body>
+</html>

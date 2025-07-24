@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="author" name="vk">
+  <title>Food FeedBack</title>
+  <link rel="stylesheet" href="final.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <!--Bootstramp start-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <!--Bootstrap end-->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .form-toggle {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .form-toggle a {
+      color: #007BFF;
+      cursor: pointer;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="sectionfistpage">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="rama.png" class="foodlogo" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ml-auto">
+            <a class="nav-link active" id="navItem1" href="#wcuSection">
+              Home
+              <span class="sr-only">(current)</span>
+            </a>
+            <a class="nav-link" href="#followUsSection" id="navItem4" onclick="displaySection('sectionLogin')">Start</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <h1 class="h-f">Welcome to FWM - Students Leading the Way to Zero Waste!</h1>
+    <div class="d-flex flex-row">
+      <p class="para">
+        About FWM :<br><br>
+        FWM is not just a website; it's a movement led by students like you to revolutionize food waste management. Join us in the mission to reduce waste, optimize meals, and make your dining experience more sustainable!<br><br>
+        Our Key Features:<br><br>
+        Student-Driven Feedback System: Empower yourself! Our unique system relies on your valuable feedback to drive waste reduction initiatives. Your voice shapes the future of dining.<br>
+        Witness the impact! Track how your feedback contributes to waste reduction, creating an accountable food management system.<br>
+        Customized Meal Plans: Your preferences matter. Our system adapts to your feedback, crafting meal plans that align with your tastes and values.<br>
+      </p>
+      <img src="rama.png" class="home-logo" />
+    </div>
+  </div>
+
+  <div id="sectionLogin" class="hidden">
+    <div class="container">
+      <div id="register-form">
+        <h2>Register</h2>
+        <form action="register.php" method="post">
+          <input type="text" name="username" placeholder="Username" required>
+          <input type="password" name="password" placeholder="Password" required>
+          <button type="submit">Register</button>
+        </form>
+        <div class="form-toggle">
+          Already have an account? <a onclick="toggleForms()">Login here</a>
+        </div>
+      </div>
+      <div id="login-form" class="hidden">
+        <h2>Login</h2>
+        <form action="login.php" method="post">
+          <input type="text" name="username" placeholder="Username" required>
+          <input type="password" name="password" placeholder="Password" required>
+          <button type="submit">Login</button>
+        </form>
+        <div class="form-toggle">
+          Don't have an account? <a onclick="toggleForms()">Register here</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function displaySection(sectionId) {
+      document.getElementById('sectionfistpage').classList.add('hidden');
+      document.getElementById(sectionId).classList.remove('hidden');
+    }
+
+    function toggleForms() {
+      var registerForm = document.getElementById("register-form");
+      var loginForm = document.getElementById("login-form");
+      if (registerForm.classList.contains('hidden')) {
+        registerForm.classList.remove('hidden');
+        loginForm.classList.add('hidden');
+      } else {
+        registerForm.classList.add('hidden');
+        loginForm.classList.remove('hidden');
+      }
+    }
+  </script>
+</body>
+</html>
